@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LangGraph Workflow Diagram</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        // Initialize Mermaid (optional, if you want specific config or startOnLoad: false)
+        // mermaid.initialize({ startOnLoad: true }); // Default is true
+        // Force rendering if content is loaded dynamically or not on load
+        document.addEventListener('DOMContentLoaded', () => {
+            mermaid.run();
+        });
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .mermaid {
+            width: 90%;
+            height: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: auto; /* In case the diagram is very wide */
+        }
+    </style>
+</head>
+<body>
+    <pre class="mermaid">
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	verify_token(verify_token)
+	analyze_result(analyze_result)
+	suggest_remediation(suggest_remediation)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> verify_token;
+	analyze_result -. &nbsp;end&nbsp; .-> __end__;
+	analyze_result -. &nbsp;remediate&nbsp; .-> suggest_remediation;
+	verify_token --> analyze_result;
+	suggest_remediation --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+
+    </pre>
+</body>
+</html>
+        
