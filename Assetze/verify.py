@@ -75,6 +75,6 @@ def verify_github_token_tool(token: str) -> str:
 if __name__ == '__main__':
     # Example usage for testing the tool function directly
     # Replace with a real token for actual testing
-    token_to_test = "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"
+    token_to_test = ""
     verification_output = verify_github_token_tool.run(token_to_test)
     print(verification_output)
