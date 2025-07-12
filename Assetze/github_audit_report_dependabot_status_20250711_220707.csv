@@ -1,0 +1,4 @@
+Organization,Repository Name,Dependabot Status,Detailed Message,HTTP Status Code
+Assetze-SOC,Assetze-SOC2,Enabled,Dependabot vulnerability alerts are ENABLED for Assetze-SOC/Assetze-SOC2.,204
+another-org,another-repo,Disabled/Not Found,Dependabot vulnerability alerts are DISABLED for another-org/another-repo or repository not found.,404
+P6-36-216,Thumbnail-Consistency,Error: Forbidden,Forbidden: Resource not accessible by personal access token. Check token scopes ('repo' or 'public_repo') and access.,403
